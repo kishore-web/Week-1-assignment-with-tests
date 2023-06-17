@@ -6,8 +6,26 @@
   - `npm run test-palindrome`
 */
 
-function isPalindrome(str) {
-  return true;
+function transform(str){
+    let strNew = ''
+    for(let i = 0; i<str.length; i++){
+      if(str[i]==" " || str[i] == "?" || str[i]== "." || str[i]=="!"){
+        continue
+      } else {
+        strNew += str[i]
+      }
+    }
+    return strNew
 }
 
+function isPalindrome(str) {
+    str = transform(str)
+    const strRev = str.split("").reverse().join("").toLowerCase()
+    console.log(strRev)
+    if(str.toLowerCase() !== strRev){
+      return false
+    }
+  return true;
+}
+console.log(isPalindrome("Able, was I ere I saw Elba!"))
 module.exports = isPalindrome;
