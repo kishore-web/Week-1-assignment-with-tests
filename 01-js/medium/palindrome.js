@@ -9,12 +9,14 @@
 function transform(str){
     let strNew = ''
     for(let i = 0; i<str.length; i++){
-      if(str[i]==" " || str[i] == "?" || str[i]== "." || str[i]=="!"){
+      if(str[i]==" " || str[i] == "?" || str[i]== "." || str[i]=="!" || str[i]==","){
         continue
       } else {
         strNew += str[i]
+        console.log(strNew)
       }
     }
+    
     return strNew
 }
 
