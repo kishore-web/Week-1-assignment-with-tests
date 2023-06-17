@@ -13,7 +13,7 @@ function transform(str){
         continue
       } else {
         strNew += str[i]
-        console.log(strNew)
+        //console.log(strNew)
       }
     }
     
@@ -23,7 +23,7 @@ function transform(str){
 function isPalindrome(str) {
     str = transform(str)
     const strRev = str.split("").reverse().join("").toLowerCase()
-    console.log(strRev)
+   // console.log(strRev)
     if(str.toLowerCase() !== strRev){
       return false
     }
