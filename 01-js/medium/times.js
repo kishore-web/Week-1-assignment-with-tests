@@ -7,6 +7,14 @@ Try running it for
 Hint - use Date class exposed in JS
 */
 
-function calculateTime(n) {
-    return 0.01;
+function calculateTime(num) {
+    let x = new Date().getTime();
+        let sum = 0
+        for(let i = 0; i< num; i++){
+            sum += i
+        }
+    let z = new Date().getTime()
+    return z-x;
 }
+console.log("Run time in seconds:"+ calculateTime(1000000000))
+
