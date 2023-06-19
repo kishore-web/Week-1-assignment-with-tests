@@ -8,7 +8,7 @@
 */
 function stringSort(str){
   const strSplit = str.split("")
-  console.log(strSplit)
+  //console.log(strSplit)
   const strSort = strSplit.sort()
   return strSort.join("")
 }
